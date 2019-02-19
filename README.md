@@ -53,7 +53,7 @@ Advanced user config for Awesome WM, It consist of a bunch of new widgets, featu
 #### Installation
 Copy all scripts to you setting folder
 ```shell
-$ git clone https://github.com/worron/awesome-config.git ~/.config/awesome --recursive
+$ git clone https://github.com/glaucomachado/awesome-config.git ~/.config/awesome --recursive
 ```
 and then edit `rc.lua` to select wanted config.
 
