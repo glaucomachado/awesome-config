@@ -15,6 +15,8 @@ function autostart.run()
 	-- utils
 	awful.spawn.with_shell("compton")
 	awful.spawn.with_shell("nm-applet")
+	awful.spawn.with_shell("megasync")
+	awful.spawn.with_shell("redshift")
 --	awful.spawn.with_shell("bash ~/scripts/env/pa-setup.sh")
 --	awful.spawn.with_shell("bash ~/scripts/env/color-profile-setup.sh")
 
