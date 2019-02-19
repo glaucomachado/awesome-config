@@ -15,8 +15,7 @@ function autostart.run()
 	-- utils
 	awful.spawn.with_shell("compton")
 	awful.spawn.with_shell("nm-applet")
-	awful.spawn.with_shell("megasync")
-	awful.spawn.with_shell("redshift")
+	awful.spawn.with_shell("xrandr --output eDP1 --primary --auto --output HDMI1 --auto --right-of eDP1")
 --	awful.spawn.with_shell("bash ~/scripts/env/pa-setup.sh")
 --	awful.spawn.with_shell("bash ~/scripts/env/color-profile-setup.sh")
 
@@ -31,6 +30,8 @@ function autostart.run()
 --	awful.spawn.with_shell("bash ~/scripts/env/kbdd-setup.sh")
 
 	-- apps
+	awful.spawn.with_shell("megasync")
+	awful.spawn.with_shell("redshift")
 --	awful.spawn.with_shell("clipflap")
 --	awful.spawn.with_shell("transmission-gtk -m")
 end

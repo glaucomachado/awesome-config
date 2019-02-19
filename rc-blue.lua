@@ -82,7 +82,7 @@ taglist.buttons = awful.util.table.join(
 -- Textclock widget
 --------------------------------------------------------------------------------
 local textclock = {}
-textclock.widget = redflat.widget.textclock({ timeformat = "%H:%M", dateformat = "%b  %d  %a" })
+textclock.widget = redflat.widget.textclock({ timeformat = "%H:%M", dateformat = "%A, %d %B" })
 
 -- Software update indcator
 --------------------------------------------------------------------------------
@@ -219,7 +219,7 @@ awful.screen.connect_for_each_screen(
 		env.wallpaper(s)
 
 		-- tags
-		awful.tag({ "Term", "Nav", "Files", "Edit", "Free" }, s, { al[5], al[6], al[6], al[4], al[3] })
+		awful.tag({ "Term", "Nav", "Files", "Edit", "Free", "Code" }, s, { al[5], al[6], al[6], al[4], al[3], al[6] })
 		-- awful.tag({ "Main", "Full", "Edit", "Read", "Free" }, s, { al[5], al[6], al[6], al[4], al[3] })
 		-- awful.tag({ "", "", "", "", "" }, s, { al[5], al[6], al[6], al[4], al[3] })
 
@@ -279,8 +279,8 @@ awful.screen.connect_for_each_screen(
 
 -- Desktop widgets
 -----------------------------------------------------------------------------------------------------------------------
-local desktop = require("blue.desktop-config") -- load file with desktop widgets configuration
-desktop:init({ env = env })
+--local desktop = require("blue.desktop-config") -- load file with desktop widgets configuration
+--desktop:init({ env = env })
 
 
 -- Active screen edges
