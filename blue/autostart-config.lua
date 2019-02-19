@@ -31,7 +31,7 @@ function autostart.run()
 
 	-- apps
 	awful.spawn.with_shell("megasync")
-	awful.spawn.with_shell("redshift")
+	awful.spawn.with_shell("redshift-gtk")
 --	awful.spawn.with_shell("clipflap")
 --	awful.spawn.with_shell("transmission-gtk -m")
 end

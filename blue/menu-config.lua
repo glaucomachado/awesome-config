@@ -75,7 +75,7 @@ function menu:init(args)
 		items = {
 			{ "Applications",  	appmenu,     		micon("distributor-logo") },
 			separator,
-			{ "Terminal", 		"termite",			micon("terminal") },
+			{ "Terminal", 		"termite",			micon("utilities-terminal") },
 			{ "Vivaldi", 		"vivaldi-stable",	micon("firefox") },
 			{ "Arquivos",    	"nautilus",    		micon("folder") },
 			{ "VS-Code",   		"code",   			micon("emacs") },

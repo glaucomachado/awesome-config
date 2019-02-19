@@ -34,43 +34,48 @@ theme.homedir = os.getenv("HOME")
 -- Main config
 ------------------------------------------------------------
 
-theme.panel_height        = 36 -- panel height
+theme.panel_height        = 34 -- panel height
 theme.border_width        = 4  -- window border width
-theme.useless_gap         = 4  -- useless gap
+theme.useless_gap         = 6  -- useless gap
 
 theme.cellnum = { x = 96, y = 58 } -- grid layout property
 
-theme.wallpaper = theme.path .. "/wallpaper/custom.png" -- wallpaper file
+--theme.wallpaper = theme.path .. "/wallpaper/city-landscape.jpg" -- wallpaper file
+-- theme.wallpaper = theme.path .. "/wallpaper/sunset_in_rio_de_janeiro_by_luizrezende.png" -- wallpaper file
+-- theme.wallpaper = theme.path .. "/wallpaper/skull_wallpaper_arch2.jpg" -- wallpaper file
+-- theme.wallpaper = theme.path .. "/wallpaper/Sky-wallpaper.jpg" -- wallpaper file
+-- theme.wallpaper = theme.path .. "/wallpaper/alena-aenami-dreamer-1k.jpg" -- wallpaper file
+theme.wallpaper = theme.path .. "/wallpaper/minimalist-sunrise-wallpaper.jpg" -- wallpaper file
 
 -- Fonts
 ------------------------------------------------------------
 theme.fonts = {
-	main     = "Roboto 13",      -- main font
-	menu     = "Roboto 13",      -- main menu font
-	tooltip  = "Roboto 13",      -- tooltip font
-	notify   = "Play bold 14",   -- redflat notify popup font
-	clock    = "Play bold 12",   -- textclock widget font
-	qlaunch  = "Play bold 14",   -- quick launch key label font
-	keychain = "Play bold 16",   -- key sequence tip font
-	title    = "Roboto bold 13", -- widget titles font
-	titlebar = "Roboto bold 13", -- client titlebar font
+	main     = "SF Pro Display 13",      -- main font
+	menu     = "SF Pro Display 13",      -- main menu font
+	tooltip  = "SF Pro Display 13",      -- tooltip font
+	notify   = "SF Pro Display Bold 14",   -- redflat notify popup font
+	clock    = "SF Pro Display Bold 12",   -- textclock widget font
+	qlaunch  = "SF Pro Display Bold 14",   -- quick launch key label font
+	keychain = "SF Pro Display Bold 16",   -- key sequence tip font
+	title    = "SF Pro Display Bold 13", -- widget titles font
+	titlebar = "SF Pro Display Bold 13", -- client titlebar font
 	hotkeys  = {
-		main  = "Roboto 14",             -- hotkeys helper main font
-		key   = "Iosevka Term Light 14", -- hotkeys helper key font (use monospace for align)
-		title = "Roboto bold 16",        -- hotkeys helper group title font
-	},
+		main  = "Fantasque Sans Mono 18",		-- hotkeys helper main font
+		key   = "Fantasque Sans Mono 18", 		-- hotkeys helper key font (use monospace for align)
+		title = "Fantasque Sans Mono bold 20",  -- hotkeys helper group title font
+		},
 	player   = {
-		main = "Play bold 13", -- player widget main font
-		time = "Play bold 15", -- player widget current time font
+		main = "SF Pro Display Bold 13", -- player widget main font
+		time = "SF Pro Display Bold 15", -- player widget current time font
 	},
 }
 
 theme.cairo_fonts = {
-	tag         = { font = "Play", size = 16, face = 1 }, -- tag widget font
-	appswitcher = { font = "Play", size = 20, face = 1 }, -- appswitcher widget font
+	tag         = { font = "SF Pro Display", size = 12, face = 1 }, -- tag widget font
+	appswitcher = { font = "SF Pro Display", size = 20, face = 1 }, -- appswitcher widget font
 	navigator   = {
-		title = { font = "Play", size = 28, face = 1, slant = 0 }, -- window navigation title font
-		main  = { font = "Play", size = 22, face = 1, slant = 0 }  -- window navigation  main font
+		title = { font = "SF Pro Display", size = 28, face = 1, slant = 0 }, -- window navigation title font
+		main  = { font = "SF Pro Display", size = 22, face = 1, slant = 0 }  -- window navigation  main font
 	},
 }
 
@@ -295,9 +300,9 @@ theme.gauge.monitor.double = {
 -- Tag
 ------------------------------------------------------------
 theme.gauge.tag.blue = {
-	width    = 103,
+	width    = 40,
 	font     = theme.cairo_fonts.tag,
-	point    = { width = 80, height = 3, gap = 27, dx = 5 },
+	point    = { width = 40, height = 3, gap = 27, dx = 5 },
 	text_gap = 20,
 	color    = theme.color
 }
@@ -326,7 +331,7 @@ theme.gauge.graph.dots = {
 -- Volume indicator
 ------------------------------------------------------------
 theme.gauge.audio.blue = {
-	width   = 75,
+	width   = 65,
 	dash    = { bar = { num = 5, width = 4 }, color = theme.color },
 	dmargin = { 10, 0, 2, 2 },
 	icon    = theme.path .. "/widget/headphones.svg",
@@ -342,12 +347,12 @@ theme.widget = {}
 ------------------------------------------------------------
 theme.widget.wrapper = {
 	layoutbox   = { 12, 10, 6, 6 },
-	textclock   = { 10, 10, 0, 0 },
-	volume      = { 10, 10, 5, 5 },
-	network     = { 10, 10, 5, 5 },
-	cpuram      = { 10, 10, 5, 5 },
-	keyboard    = { 10, 10, 4, 4 },
-	mail        = { 10, 10, 4, 4 },
+	textclock   = { 8, 8, 0, 0 },
+	volume      = { 8, 8, 5, 5 },
+	network     = { 8, 8, 5, 5 },
+	cpuram      = { 8, 8, 5, 5 },
+	keyboard    = { 8, 8, 4, 4 },
+	mail        = { 8, 8, 4, 4 },
 	battery     = { 8, 10, 7, 7 },
 	tray        = { 8, 8, 7, 7 },
 	tasklist    = { 4, 0, 0, 0 }, -- centering tasklist widget
@@ -381,7 +386,7 @@ theme.widget.keyboard = {
 }
 
 theme.widget.keyboard.menu = {
-	width        = 180,
+	width        = 150,
 	color        = { right_icon = theme.color.icon },
 	nohide       = true
 }
