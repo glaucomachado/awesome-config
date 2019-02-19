@@ -33,7 +33,7 @@ function desktop:init(args)
 	local netspeed = { geometry = wgeometry(grid, places.netspeed, workarea) }
 
 	netspeed.args = {
-		interface    = "wlp3s0",
+		interface    = "wlp60s0",
 		maxspeed     = { up = 6*1024^2, down = 6*1024^2 },
 		crit         = { up = 6*1024^2, down = 6*1024^2 },
 		timeout      = 2,
@@ -47,7 +47,7 @@ function desktop:init(args)
 	local ssdspeed = { geometry = wgeometry(grid, places.ssdspeed, workarea) }
 
 	ssdspeed.args = {
-		interface = "sdb",
+		interface = "nvme0n1",
 		meter_function = system.disk_speed,
 		timeout   = 2,
 		label     = "SOLID DRIVE"
@@ -145,7 +145,7 @@ function desktop:init(args)
 	ssdspeed.widget = redflat.desktop.speedgraph(ssdspeed.args, ssdspeed.geometry, ssdspeed.style)
 	hddspeed.widget = redflat.desktop.speedgraph(hddspeed.args, hddspeed.geometry, hddspeed.style)
 	cpumem.widget = redflat.desktop.multim(cpumem.args, cpumem.geometry, cpumem.style)
---	transm.widget = redflat.desktop.multim(transm.args, transm.geometry, transm.style)
+	transm.widget = redflat.desktop.multim(transm.args, transm.geometry, transm.style)
 	disks.widget = redflat.desktop.dashpack(disks.args, disks.geometry, disks.style)
 	thermal.widget = redflat.desktop.simpleline(thermal.args, thermal.geometry, thermal.style)
 end

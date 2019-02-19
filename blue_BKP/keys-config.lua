@@ -165,25 +165,14 @@ function hotkeys:init(args)
 	------------------------------------------------------------
 	local apprunner_keys_move = {
 		{
-			{  }, "Down", function() apprunner:down() end,
+			{ env.mod }, "k", function() apprunner:down() end,
 			{ description = "Select next item", group = "Navigation" }
 		},
 		{
-			{  }, "Up", function() apprunner:up() end,
+			{ env.mod }, "i", function() apprunner:up() end,
 			{ description = "Select previous item", group = "Navigation" }
 		},
 	}
-
---	local apprunner_keys_move = {
---		{
---			{ env.mod }, "k", function() apprunner:down() end,
---			{ description = "Select next item", group = "Navigation" }
---		},
---		{
---			{ env.mod }, "i", function() apprunner:up() end,
---			{ description = "Select previous item", group = "Navigation" }
---		},
---	}	
 
 	-- apprunner:set_keys(awful.util.table.join(apprunner.keys.move, apprunner_keys_move), "move")
 	apprunner:set_keys(apprunner_keys_move, "move")
@@ -192,19 +181,19 @@ function hotkeys:init(args)
 	------------------------------------------------------------
 	local menu_keys_move = {
 		{
-			{  }, "Down", redflat.menu.action.down,
+			{ env.mod }, "k", redflat.menu.action.down,
 			{ description = "Select next item", group = "Navigation" }
 		},
 		{
-			{  }, "Up", redflat.menu.action.up,
+			{ env.mod }, "i", redflat.menu.action.up,
 			{ description = "Select previous item", group = "Navigation" }
 		},
 		{
-			{  }, "Left", redflat.menu.action.back,
+			{ env.mod }, "j", redflat.menu.action.back,
 			{ description = "Go back", group = "Navigation" }
 		},
 		{
-			{  }, "Right", redflat.menu.action.enter,
+			{ env.mod }, "l", redflat.menu.action.enter,
 			{ description = "Open submenu", group = "Navigation" }
 		},
 	}

@@ -174,7 +174,7 @@ sysmon.widget.battery = redflat.widget.sysmon(
 -- network speed
 sysmon.widget.network = redflat.widget.net(
 	{
-		interface = "wlp3s0",
+		interface = "wlp60s0",
 		alert = { up = 5 * 1024^2, down = 5 * 1024^2 },
 		speed = { up = 6 * 1024^2, down = 6 * 1024^2 },
 		autoscale = false
@@ -231,7 +231,7 @@ awful.screen.connect_for_each_screen(
 		tasklist[s] = redflat.widget.tasklist({ screen = s, buttons = tasklist.buttons }, tasklist.style)
 
 		-- panel wibox
-		s.panel = awful.wibar({ position = "top", screen = s, height = beautiful.panel_height or 36 })
+		s.panel = awful.wibar({ position = "bottom", screen = s, height = beautiful.panel_height or 36 })
 
 		-- add widgets to the wibox
 		s.panel:setup {
@@ -254,8 +254,8 @@ awful.screen.connect_for_each_screen(
 			{ -- right widgets
 				layout = wibox.layout.fixed.horizontal,
 
-				--separator,
-				--env.wrapper(mail.widget, "mail", mail.buttons),
+				separator,
+				env.wrapper(mail.widget, "mail", mail.buttons),
 				separator,
 				env.wrapper(kbindicator.widget, "keyboard", kbindicator.buttons),
 				separator,

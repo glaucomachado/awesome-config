@@ -20,15 +20,12 @@ function env:init(args)
 
 	-- init vars
 	local args = args or {}
-	local theme = args.theme or "red"
+	local theme = args.theme or "colorless"
 
 	-- environment vars
-	self.terminal = args.terminal or "termite"
+	self.terminal = args.terminal or "x-terminal-emulator"
 	self.mod = args.mod or "Mod4"
-	self.fm = args.fm or "files"
-	self.mail = args.mail or "evolution"
-	self.player = args.player or "exaile"
-	self.upgrades = args.upgrades or "bash -c 'pacman -Qu | grep -v ignored | wc -l'"
+	self.fm = args.fm or "nautilus"
 	self.home = os.getenv("HOME")
 	self.themedir = awful.util.get_configuration_dir() .. "themes/" .. theme
 
@@ -52,7 +49,6 @@ function env:init(args)
 		naughty.config.presets.critical.height, naughty.config.presets.critical.width = nil, nil
 	end
 end
-
 
 -- Common functions
 -----------------------------------------------------------------------------------------------------------------------
