@@ -7,7 +7,6 @@ local beautiful = require("beautiful")
 local redflat = require("redflat")
 local awful = require("awful")
 
-
 -- Initialize tables and vars for module
 -----------------------------------------------------------------------------------------------------------------------
 local menu = {}
@@ -83,7 +82,7 @@ function menu:init(args)
 			separator,
 			{ "Awesome",       	awesomemenu, 		micon("awesome") },
 			{ "Exit",     		exitmenu,       	micon("exit") },
-			{ "Shutdown", 		"shutdown now", 	micon("system-shutdown") }
+			{ "Shutdown", 		"shutdown now", 	micon("system-shutdown") },
 		}
 	})
 

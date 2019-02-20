@@ -22,8 +22,25 @@ rules.base_properties = {
 
 rules.floating_any = {
 	class = {
-		"Clipflap", "Run.py",
+		"Clipflap", 
+		"Run.py",
+		"Arandr",
+        "Gpick",
+        "Kruler",
+        "MessageWin",  -- kalarm.
+        "Sxiv",
+        "Wpa_gui",
+        "pinentry",
+        "veromix",
+        "xtightvncviewer"
 	},
+	name = {
+        "Event Tester",  -- xev.
+	},
+	instance = {
+        "DTA",  -- Firefox addon DownThemAll.
+        "copyq",  -- Includes session name in class.
+    },
 	role = { "AlarmWindow", "pop-up", },
 	type = { "dialog" }
 }
@@ -36,6 +53,12 @@ rules.maximized = {
 	class = { "Emacs24" }
 }
 
+awful.rules.rules = {
+ -- Set Firefox to always map on the tag named "2" on screen 1.
+    { rule = { class = "Firefox" },
+		properties = { screen = 1, tag = "Nav" } 
+	},
+}
 -- Build rule table
 -----------------------------------------------------------------------------------------------------------------------
 function rules:init(args)
