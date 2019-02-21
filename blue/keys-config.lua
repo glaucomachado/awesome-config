@@ -618,6 +618,14 @@ function hotkeys:init(args)
 			{ description = "Open a terminal", group = "Applications" }
 		},
 		{
+			{ env.mod, "Shift" }, "Return", function() awful.spawn(env.terminal, {floating = true}) end,
+			{ description = "Open a floating terminal", group = "Applications" }
+		},
+		{
+			{ env.mod }, "z", function() awful.spawn("killall -SIGUSR1 jgmenu") end,
+			{ description = "Open jgmenu", group = "Applications" }
+		},
+		{
 			{ env.mod, "Mod1" }, "space", function() awful.spawn("clipflap --show") end,
 			{ description = "Clipboard manager", group = "Applications" }
 		},
@@ -652,9 +660,13 @@ function hotkeys:init(args)
 			{ description = "Show main menu", group = "Widgets" }
 		},
 		{
-			{ env.mod }, "r", function() apprunner:show() end,
+			{ env.mod }, "r", function() awful.spawn("rofi -show drun -location 1 -yoffset 190 -xoffset 608 -line-padding 4 -columns 1 -width 35 -lines 10 -padding 25 -hide-scrollbar -show-icons -drun-icon-theme 'Papirus' -font 'San Francisco Display Bold 24'") end,
 			{ description = "Application launcher", group = "Widgets" }
 		},
+		--{
+		--	{ env.mod }, "r", function() apprunner:show() end,
+		--	{ description = "Application launcher", group = "Widgets" }
+		--},
 		{
 			{ env.mod }, "p", function() redflat.float.prompt:run() end,
 			{ description = "Show the prompt box", group = "Widgets" }

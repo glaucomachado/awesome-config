@@ -13,15 +13,16 @@ local autostart = {}
 --------------------------------------------------------------------------------
 function autostart.run()
 	-- utils
-	awful.spawn.with_shell("compton")
-	awful.spawn.with_shell("nm-applet")
+	awful.spawn.with_shell("compton -f")
+--	awful.spawn.with_shell("nm-applet")
 	awful.spawn.with_shell("xrandr --output eDP1 --primary --auto --output HDMI1 --auto --right-of eDP1")
 	awful.spawn.with_shell("/usr/bin/xinput set-prop 13 288 1")
 	awful.spawn.with_shell("/usr/bin/xinput set-prop 17 306 1")
 	awful.spawn.with_shell("setxkbmap us -variant intl")
 	awful.spawn.with_shell("pamac-tray")
 	awful.spawn.with_shell("jgmenu --no-spawn")
-	awful.spawn.with_shell("pulseaudio --daemonize && start-pulseaudio-x11")
+	--awful.spawn.with_shell("pulseaudio --kill && pulseaudio --daemonize")
+	awful.spawn.with_shell("pulseaudio --start")
 	
 --	awful.spawn.with_shell("bash ~/scripts/env/pa-setup.sh")
 --	awful.spawn.with_shell("bash ~/scripts/env/color-profile-setup.sh")
